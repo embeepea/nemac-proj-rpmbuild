@@ -1,0 +1,11 @@
+diff -ru proj-4.8.0.orig/nad/epsg proj-4.8.0/nad/epsg
+--- proj-4.8.0.orig/nad/epsg	2012-03-07 05:58:49.000000000 +0000
++++ proj-4.8.0/nad/epsg	2015-01-30 15:11:39.340880788 +0000
+@@ -8462,3 +8462,7 @@
+ <32761> +proj=stere +lat_0=-90 +lat_ts=-90 +lon_0=0 +k=0.994 +x_0=2000000 +y_0=2000000 +datum=WGS84 +units=m +no_defs  <>
+ # WGS 84 / TM 36 SE
+ <32766> +proj=tmerc +lat_0=0 +lon_0=36 +k=0.9996 +x_0=500000 +y_0=10000000 +datum=WGS84 +units=m +no_defs  <>
++#
++#  Funny epsgish code for google mercator - you should really use EPSG:3857
++#
++<900913> +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs <>

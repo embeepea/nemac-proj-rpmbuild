@@ -1,12 +1,13 @@
 Name:           nemac-proj
 Version:        4.8.0
-Release:        3%{?dist}
+Release:        5%{?dist}
 Summary:        NEMAC's custom build of proj4
 
 Group:          Applications/Engineering
 License:        GPLV2+
 URL:            http://trac.osgeo.org/proj/
 Source0:        proj-%{version}.tar.gz
+Patch0:         proj-%{version}-google-epsg.patch
 
 %description
 This is NEMAC's custom build of proj4 for use on servers.
@@ -23,7 +24,7 @@ you will need to install %{name}-devel.
 
 %prep
 %setup -q -n proj-%{version}
-
+%patch0 -p1
 
 %build
 %configure
